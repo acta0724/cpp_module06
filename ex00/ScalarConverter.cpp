@@ -13,7 +13,7 @@ bool isPseudoLiteral(const std::string &str) {
 }
 
 bool isCharLiteral(const std::string &str) {
-    if (str.size() == 1 && std::isprint(str[0])) {
+    if (str.size() == 1 && std::isprint(str[0]) && !std::isdigit(str[0])) {
         return true;
     }
     return false;
